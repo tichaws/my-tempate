@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UnauthorizationComponent } from './unauthorization.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomepageComponent }
+  { path: '', component: HomepageComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
@@ -18,10 +20,12 @@ const appRoutes: Routes = [
   ],
   exports: [
     RouterModule,
-    UnauthorizationComponent
+    UnauthorizationComponent,
+    LoginComponent
   ],
   declarations: [
-    UnauthorizationComponent
+    UnauthorizationComponent,
+    LoginComponent
   ],
   providers: [
   ]
